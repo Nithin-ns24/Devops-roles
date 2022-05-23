@@ -1,0 +1,10 @@
+---
+- name: launch ec2 instance
+  hosts: server1
+  gather_facts: False
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  roles:
+    - ec2instance
+

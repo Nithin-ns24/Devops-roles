@@ -1,0 +1,13 @@
+---
+- name: launching the AWS instance
+  ec2:
+   instance_type: t2.micro
+   image: "{{ imageid}}"
+   count: 1
+   key_name: "{{ keyname }}"
+   region: ap-south-1
+   wait: yes
+   group: "{{ groupid }}"
+   instance_tags:
+     Name: Test
+     env: dev

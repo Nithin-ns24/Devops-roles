@@ -1,0 +1,9 @@
+---
+- name: start , stop and terminate ec2 instance
+  hosts: server1
+  become: yes
+  become_user: ubuntu
+  gather_facts: false
+  roles:
+    - startstop
+

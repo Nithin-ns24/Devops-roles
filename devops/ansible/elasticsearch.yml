@@ -1,0 +1,8 @@
+---
+- name: Install elastic search
+  hosts: server1
+  gather_facts: False
+  become: yes
+  roles:
+    - elasticsearch
+

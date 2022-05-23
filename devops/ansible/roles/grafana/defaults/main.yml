@@ -1,0 +1,5 @@
+---
+grafana_admin_password: "mypassword"
+url_path: "https://packages.grafana.com/gpg.key"
+repo_path: "deb https://packages.grafana.com/oss/deb stable main"
+httpd: "http://127.0.0.1:3000"

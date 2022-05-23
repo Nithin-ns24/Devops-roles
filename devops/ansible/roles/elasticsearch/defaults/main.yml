@@ -1,0 +1,5 @@
+---
+pgp_key: "https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+dest_path: "/etc/apt/sources.list.d/elastic-7.x.list"
+content_path: "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
+
