@@ -1,0 +1,29 @@
+---
+ - hosts: localhost
+   connection: local
+   tasks:
+    - name: creating instance
+      gcp_compute_instance:
+       name: nithin
+       machine_type: e2 micro
+       disks:
+        - auto_delete: true
+          boot: true
+          initialize_params:
+             source_image: projects/ubuntu-cloud/global/images/family/ubuntu18.04
+       network_interfaces:
+        - access_configs:
+            - name: External NAT
+              type: ONE_TO_ONE_NAT
+       metadata:
+        startup-script: |
+             #!/bin/bash
+             sudo yum install httpd -y
+             sudo echo "HELLO WORLD !!" > /var/www/html/index.html
+             sudo systemctl restart httpd 
+       zone: us-central1-a
+       project: chrome-weft-348007
+       auth_kind: serviceaccount
+       service_account_file: /home/nithinnith24/service.jason
+       state: present
+

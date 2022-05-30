@@ -1,0 +1,11 @@
+---
+- name: Start a GCP VM instance which is currently stopped
+  gcp_compute_instance:
+    name: "{{ host_name }}"
+    deletion_protection: no
+    machine_type: e2-medium
+    zone: us-central1-a
+    auth_kind: serviceaccount
+    project: chrome-weft-348007
+    service_account_file: /home/nithinnith24/service.jason
+    status: RUNNING
