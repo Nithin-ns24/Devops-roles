@@ -14,7 +14,7 @@
    - never
 - name: Stopping a GCP VM instance 
   gcp_compute_instance:
-    name: ansible-1
+    name: "{{ host_name }}"
     deletion_protection: no
     machine_type: e2-medium
     zone: us-central1-a
