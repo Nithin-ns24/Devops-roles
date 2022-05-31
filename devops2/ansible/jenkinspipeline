@@ -1,0 +1,11 @@
+pipeline{
+    agent any
+    stages{
+        stage('create'){
+            steps{
+                sh 'cd /home/nithinnith24/devops2/ansible'
+                sh 'ansible-playbook /home/nithinnith24/devops2/ansible/gcpstartstop.yml -e "status=$status" -e "host_name=$host_name"'
+            }
+        }
+    }
+}
