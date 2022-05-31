@@ -9,3 +9,18 @@
     project: chrome-weft-348007
     service_account_file: /home/nithinnith24/service.jason
     status: RUNNING
+  tags:
+   - start
+   - never
+- name: Stopping a GCP VM instance 
+  gcp_compute_instance:
+    name: ansible-1
+    deletion_protection: no
+    machine_type: e2-medium
+    zone: us-central1-a
+    auth_kind: serviceaccount
+    service_account_file: "{{ gcp_ce_service_account_keyfile }}"
+    status: STOPPED
+  tags:
+   - start
+   - never
