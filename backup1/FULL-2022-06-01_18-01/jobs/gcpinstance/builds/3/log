@@ -1,0 +1,34 @@
+Started by user [8mha:////4IxO0E0gmifEDZpyBpEK3LOJQnWX8ng3cWpeqXZ9vkFbAAAAnB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYB/dLi1CL9rNS87My8Yl0DIwCwyBBKxQAAAA==[0mnithin
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/gcpinstance
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/gcpinstance/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Nithin-optit/Devops-roles.git # timeout=10
+Fetching upstream changes from https://github.com/Nithin-optit/Devops-roles.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.25.1'
+ > git fetch --tags --force --progress -- https://github.com/Nithin-optit/Devops-roles.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+Checking out Revision bd33b030a55d332f353beb03d14b98a9854d0b72 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f bd33b030a55d332f353beb03d14b98a9854d0b72 # timeout=10
+Commit message: "Delete lampstack.yml"
+ > git rev-list --no-walk bd33b030a55d332f353beb03d14b98a9854d0b72 # timeout=10
+[gcpinstance] $ /bin/sh -xe /tmp/jenkins1036347677652116146.sh
++ cd /home/nithinnith24/devops2/ansible
++ ansible-playbook gcpstartstop.yml -e status=RUNNING -e host_name=ansible
+[WARNING]: No inventory was parsed, only implicit localhost is available
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+
+PLAY [Start a GCP instance which is currently stopped] *************************
+
+TASK [startstop : Start a GCP VM instance which is currently stopped] **********
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Finished: SUCCESS
