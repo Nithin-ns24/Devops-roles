@@ -1,2 +1,0 @@
-[localhost]
-10.128.0.22 ansible_user=ubuntu
