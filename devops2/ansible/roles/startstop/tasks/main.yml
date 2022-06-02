@@ -1,7 +1,7 @@
 ---
 - name: Start a GCP VM instance which is currently stopped
   gcp_compute_instance:
-    name: "{{ host_name }}"
+    name: "{{ item }}"
     deletion_protection: no
     machine_type: e2-medium
     zone: us-central1-a
@@ -9,6 +9,7 @@
     project: chrome-weft-348007
     service_account_file: "{{ gcp_ce_service_account_keyfile }}"
     status: RUNNING
+  with_items: "{{ host_name }}"
   tags:
    - start
    - never
