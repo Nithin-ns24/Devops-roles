@@ -1,2 +1,0 @@
-[jenkins]
-10.128.0.22 ansible_ssh_user=nithinnith24 ansible_ssh_private_key_file=newkey.jason
