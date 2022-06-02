@@ -1,4 +1,4 @@
 ---
 host_name: "ansible-1"
-gcp_ce_service_account_keyfile: "/home/nithinnith24/service.jason"
+
 
